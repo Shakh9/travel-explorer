@@ -29,5 +29,5 @@ export async function getCountries(): Promise<Country[]> {
   console.log('Raw first country:', data.data.objects[0]);
   console.log('Raw flag:', data.data.objects[0]?.flag);
 
-  return data.data.objects.map(mapCountry);
+  return data.data.objects.filter((country) => /^[A-Z]{2}$/i.test(country.codes?.alpha_2 ?? '')).map(mapCountry);
 }

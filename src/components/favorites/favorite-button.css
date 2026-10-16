@@ -1,0 +1,47 @@
+.favorite-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 9px 14px;
+  border: 1px solid var(--color-border, #d2ded8);
+  border-radius: 999px;
+  color: var(--color-blue, #1e3444);
+  background: #fff;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    color 180ms ease,
+    background 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.favorite-button:hover {
+  transform: translateY(-1px);
+  border-color: var(--color-primary, #356b5d);
+}
+
+.favorite-button > span:first-child {
+  font-size: 1.15rem;
+}
+
+.favorite-button--active {
+  border-color: #e7b7b7;
+  color: #a83d4b;
+  background: #fff0f0;
+}
+
+.favorite-button--active:hover {
+  border-color: #d88b95;
+  background: #ffe5e8;
+}
+
+.favorite-button:focus-visible {
+  outline: 2px solid var(--color-primary, #356b5d);
+  outline-offset: 3px;
+}

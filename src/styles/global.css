@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'Manrope', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Brand colors */
+  --color-navy: #101d2b;
+  --color-blue: #1e3444;
+  --color-seafoam: #71d6c3;
+  --color-ivory: #f4f1e9;
+  --color-mist: #e8efea;
+  --color-sand: #e9dcc5;
+
+  /* Text colors */
+  --color-text: #18232d;
+  --color-text-muted: #647580;
+  --color-text-on-dark: #f4f1e9;
+
+  /* Surfaces and borders */
+  --color-background: #e8efea;
+  --color-surface: #f4f1e9;
+  --color-border: #d2ded8;
+
+  /* Accent */
+  --color-primary: #356b5d;
+  --color-primary-hover: #285448;
+  --color-accent: #71d6c3;
+
+  /* Typography */
+  --font-size-small: 0.875rem;
+  --font-size-body: 1rem;
+  --font-size-large: 1.125rem;
+  --font-size-heading: clamp(2.75rem, 5vw, 3.5rem);
+  --font-size-section: clamp(1.875rem, 3vw, 2.25rem);
+
+  /* Layout */
+  --content-width: 1200px;
+  --page-gutter: 24px;
+  --section-spacing: 64px;
+
+  /* Corners and shadows */
+  --radius-small: 10px;
+  --radius-medium: 16px;
+  --radius-large: 24px;
+  --radius-pill: 999px;
+
+  --shadow-card: 0 8px 30px rgb(16 29 43 / 6%);
+  --shadow-card-hover: 0 14px 36px rgb(16 29 43 / 12%);
+
+  color: var(--color-text);
+  background: var(--color-background);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  font-size: var(--font-size-body);
+  line-height: 1.65;
+  color: var(--color-text);
+  background: var(--color-background);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+}
+
+p {
+  margin-top: 0;
+}
+
+::selection {
+  color: var(--color-navy);
+  background: var(--color-seafoam);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+@media (max-width: 650px) {
+  :root {
+    --page-gutter: 16px;
+    --section-spacing: 44px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
