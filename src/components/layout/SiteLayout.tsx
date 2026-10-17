@@ -106,7 +106,9 @@ export default function SiteLayout() {
       <footer className="site-footer">
         <div className="site-footer__inner">
           <span>Travel Explorer</span>
-          <span>Discover more of the world.</span>
+          <span>
+            Designed & Developed by <a href="https://ravinshakhmuradov.ru/">Ravin Shakhmuradov</a>.{' '}
+          </span>
         </div>
       </footer>
     </div>
