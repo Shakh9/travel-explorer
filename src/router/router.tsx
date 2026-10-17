@@ -11,46 +11,51 @@ import AttractionDetailsPage from '../pages/AttractionDetailsPage';
 import FavoritesPage from '../pages/FavoritesPage';
 import NotFoundPage from '../pages/NotFoundPage';
 
-export const router = createBrowserRouter([
+export const router = createBrowserRouter(
+  [
+    {
+      element: <SiteLayout />,
+      children: [
+        {
+          path: '/',
+          element: <DiscoverPage />,
+        },
+        {
+          path: '/countries',
+          element: <CountriesPage />,
+        },
+        {
+          path: '/countries/:countryId',
+          element: <CountryDetailsPage />,
+        },
+        {
+          path: '/cities',
+          element: <CitiesPage />,
+        },
+        {
+          path: '/cities/:cityId',
+          element: <CityDetailsPage />,
+        },
+        {
+          path: '/attractions',
+          element: <AttractionsPage />,
+        },
+        {
+          path: '/attractions/:attractionId',
+          element: <AttractionDetailsPage />,
+        },
+        {
+          path: '/favorites',
+          element: <FavoritesPage />,
+        },
+        {
+          path: '*',
+          element: <NotFoundPage />,
+        },
+      ],
+    },
+  ],
   {
-    element: <SiteLayout />,
-    children: [
-      {
-        path: '/',
-        element: <DiscoverPage />,
-      },
-      {
-        path: '/countries',
-        element: <CountriesPage />,
-      },
-      {
-        path: '/countries/:countryId',
-        element: <CountryDetailsPage />,
-      },
-      {
-        path: '/cities',
-        element: <CitiesPage />,
-      },
-      {
-        path: '/cities/:cityId',
-        element: <CityDetailsPage />,
-      },
-      {
-        path: '/attractions',
-        element: <AttractionsPage />,
-      },
-      {
-        path: '/attractions/:attractionId',
-        element: <AttractionDetailsPage />,
-      },
-      {
-        path: '/favorites',
-        element: <FavoritesPage />,
-      },
-      {
-        path: '*',
-        element: <NotFoundPage />,
-      },
-    ],
+    basename: import.meta.env.BASE_URL,
   },
-]);
+);
